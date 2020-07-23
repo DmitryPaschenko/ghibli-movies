@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Movies{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  {% for movie in movies %}
+    <div>
+      <div>Title: <b>{{ movie.title }}</b></div>
+      <div>Director: {{ movie.director }}</div>
+      <div>Producer: {{ movie.producer }}</div>
+      <div>Release Date: {{ movie.release_date }}</div>
+      <div>Score: {{ movie.rt_score }}</div>
+      <div>People: {{ movie.people_list }}</div>
+      <div>Description: {{ movie.description }}</div>
+    </div>
+    <hr>
+  {% endfor %}
+{% endblock %}
