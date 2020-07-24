@@ -8,7 +8,6 @@ app = Flask(__name__)
 
 @app.route('/movies')
 def movies():
-    update_movie_list
     films = get_movies()
     if films is None:
         update_movie_list()
